@@ -15,11 +15,11 @@ int topo = -1;
 int pilha_cheia(){
     if (topo == tamanho_maximo -1){
         printf("ERRO!\nA pilha esta cheia!");
-        return 0;}
-    return 1;
+        return 1;}
+    return 0;
 }
 void push(int valor){
-    if (pilha_cheia() == 0){
+    if (pilha_cheia() == 1){
         return;
     }else{
     topo++;
@@ -29,12 +29,12 @@ void push(int valor){
 int pilha_vazia(){
     if (topo == -1){
         printf("ERRO!\nA pilha esta vazia!");
-        return 0;
+        return 1;
     }
-    return 1;
+    return 0;
 }
 void pop(){
-    if (pilha_vazia() == 0){
+    if (pilha_vazia() == 1){
         return;
     }else{
     topo--;

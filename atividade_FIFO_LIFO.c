@@ -68,7 +68,7 @@ int sairDaEsteira(){
     if (filaVazia() == -1){
         return -1;
     }
-
+    total--;
     frente = (frente + 1) % tamanho_maximo;
     return 0;
 }
